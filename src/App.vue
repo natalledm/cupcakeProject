@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <TheHeader />
     <Home />
     <TheFooter />
@@ -14,12 +9,10 @@
 <script>
 
 import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
 import TheHeader from './components/TheHeader'
 import Home from './views/Home'
 import TheFooter from './components/Footer'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 
 export default {
   components: {
