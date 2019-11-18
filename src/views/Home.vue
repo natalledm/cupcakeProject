@@ -3,9 +3,7 @@
     <span class="carousel">
       <Carousel />
     </span>
-    <span class="lists">
-      Small texts (component)
-    </span>
+    <Lists />
     <span class="test-button">
       Test button and text.
     </span>
@@ -17,6 +15,7 @@
 // import HelloWorld from "@/components/HelloWorld.vue";
 
 import Carousel from '@/components/Carousel.vue'
+import Lists from '@/components/Lists.vue'
 
 export default {
   name: 'Home'
