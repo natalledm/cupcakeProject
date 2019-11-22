@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="https://fonts.googleapis.com/css?family=Signika:300,400,600,700" rel="stylesheet">
 		
-<title>Cupcakes & Cookies</title>
+<title>Lists</title>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
 						<li>Tiramisu cupckake;</li>
 						<li>Lemon drops faworki;</li>
                 </ul>
-            </br>
+            <br>
             <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
         </div>
        
@@ -58,7 +58,7 @@
                 <li>Chupa chups wafer;</li>
                 <li>Danish marzipan;</li>
             </ul>
-            </br/>
+            <br/>
             <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
         </div>
 		
@@ -74,7 +74,7 @@
                 <li>Chupa chups ice cream;</li>
                 <li>Swedish marzipan;</li>
                 <li>Brownie pie gummi bear</li>
-            </br>
+            <br>
             </ul>
             <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
       </div>
@@ -84,12 +84,10 @@
         <h3 class="text-motivation"> Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Eget est lorem ipsum dolor.</h3>
 </div>
 
-<!-- </div> -->
+</div>
 
 </body>
-</html>
-
-    </div> 
+</html> 
 </template>
 
 <script>
@@ -127,8 +125,10 @@ margin: 0;
   
   }
 
-.h2 {
-
+.h2 {font-family: Signika;
+    color: rgb(238, 36, 97);
+     font-weight: 700;
+     text-align: left;
 }
 
 .grid {
@@ -151,8 +151,11 @@ margin: 0;
     align-self: start;
 }
 
-.h3 {
-
+    
+.h3 {font-family: Signika;
+    color: rgb(238, 36, 97);
+    font-weight: 500;
+    text-align: left;
 }
 
 ul { list-style-type: none; 
@@ -172,8 +175,8 @@ list-style-position: outside;
 
 }
 
-/* todo 22.11.2019::: CSS + rounded corners for buttons + resize CHECK Natalles code for this CSS */
-/* ASK - do we need a common line around carousel + lists + footer?*/
+/* todo 22.11.2019::: CSS + rounded corners for buttons + resize */
+/* ASK - do we need one coherent line around Header/carousel + lists + footer?*/
 
 .button-see-more {
     color: white;
