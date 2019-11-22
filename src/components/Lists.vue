@@ -121,7 +121,7 @@ margin: 0;
   
     font-style: normal;
   
-    font-weight: 400; /* här kan behöva ändras*/
+    font-weight: 400; /* Do I need to specify eg. font-weight for different titles here (eg.700 for h2 etc) How to write this the best way??*/
   
     src: local("Signika-Light"), url(http://themes.googleusercontent.com/static/fonts/signika/v3/koFYE26bhT88HgRA8f4vbRsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
   
@@ -146,6 +146,8 @@ margin: 0;
     display: -ms-grid;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
     align-self: start;
 }
 
