@@ -18,9 +18,10 @@ import Carousel from '@/components/Carousel.vue'
 import Lists from '@/components/Lists.vue'
 
 export default {
-  name: 'Home'
-  // components: {
-  //   HelloWorld
-  // }
+  name: 'Home',
+  components: {
+    Carousel,
+    Lists
+  }
 };
 </script>
