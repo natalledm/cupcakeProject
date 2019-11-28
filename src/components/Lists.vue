@@ -1,21 +1,5 @@
 <template>
    <div class="lists">
- 
- <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-		<link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link href="https://fonts.googleapis.com/css?family=Signika:300,400,600,700" rel="stylesheet">
-		
-<title>Lists</title>
-</head>
-
-<body>
-
 
 <h2 class="titles second-title">Conheça algumas opções de doces</h2>
 
