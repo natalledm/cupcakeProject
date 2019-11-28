@@ -82,13 +82,14 @@ export default {
 
 <style lang="scss">
 
-{
+/* {
     box-sizing: border-box;
 
 margin: 0;
 
     padding: 0;
 }
+*/
 
 .body {
     font-family: Signika;
@@ -121,7 +122,7 @@ margin: 0;
 
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
-    grid-template-rows: auto; 
+/*  grid-template-rows: auto;  */
 }
 
 .grid-list {
