@@ -2,6 +2,7 @@
   <div id="app">
     <TheHeader />
     <Home />
+    <Lists />
     <TheFooter />
   </div>
 </template>
@@ -11,6 +12,7 @@
 import Vue from 'vue'
 import TheHeader from './components/TheHeader'
 import Home from './views/Home'
+import Lists from './components/Lists'
 import TheFooter from './components/Footer'
 
 

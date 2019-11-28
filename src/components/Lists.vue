@@ -1,19 +1,20 @@
 <template>
-   <div class="lists">
 
-<h2 class="titles second-title">Conheça algumas opções de doces</h2>
+<div class="lists">
+
+    <h2 class="titles second-title">Conheça algumas opções de doces</h2>
 
 <!--from here I changed the names of all div and ul class="" I can easily change it back in case we need it! -->
 
-   <div class="grid">
-	<div class="grid grid1">
+    <div class="grid">
+
 
             <h3 class="title">Opção X</h3>
             <p class="text">
-			Tart marzipan tart pastry cake jelly-o.<br>
-			sugar plum pudding macaroon <br>
-			liquorice I love. Pastry desert cookie<br>
-			tart. I love I love topping danish.<br><br>
+			Tart marzipan tart pastry cake jelly-o.
+			sugar plum pudding macaroon 
+			liquorice I love. Pastry desert cookie
+			tart. I love I love topping danish.
             </p>
                 <ul class="grid-list">
 						<li>Candy cane cheesecakes;</li>
@@ -24,16 +25,16 @@
             <br>
             <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
         </div>
-       
+
             
         <div class="grid grid2">
         <h3 class="title">Opção Y</h3>
             <p class="text">
-			Halvah wypas pudding I love candy<br>
-			toffee. Jelly beans chupa chups<br>
-			pudding danish I love donut. I love<br>
-			danish bonbon jelly-o I love gummies<br>
-			cotton candy marzipan danish. Donut<br>
+			Halvah wypas pudding I love candy
+			toffee. Jelly beans chupa chups
+			pudding danish I love donut. I love
+			danish bonbon jelly-o I love gummies
+			cotton candy marzipan danish. Donut
 			sweet pastry jujubes croissant.
             </p>
 			
@@ -46,10 +47,10 @@
             <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
         </div>
 		
-      <div class="grid grid3">
+    <div class="grid grid3">
             <h3 class="title">Opção Z</h3>
             <p class="text">
-			Licorice toffee marzipan lemon drops<br>
+			Licorice toffee marzipan lemon drops
 			chocolate cake ice cream.
             </p>
 			
@@ -61,17 +62,15 @@
             <br>
             </ul>
             <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
-      </div>
+    </div>
 
-<div class="button-and-text">
+    <div class="button-and-text">
         <button class="button-test"><i class="fas fa-heart"></i> Faça um teste!</button>
         <h3 class="text-motivation"> Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Eget est lorem ipsum dolor.</h3>
-</div>
+    </div>
 
 </div>
 
-</body>
-</html> 
 </template>
 
 <script>
@@ -83,12 +82,12 @@ export default {
 
 <style lang="scss">
 
-* {
-  box-sizing: border-box;
+{
+    box-sizing: border-box;
 
 margin: 0;
 
-  padding: 0;
+    padding: 0;
 }
 
 .body {
@@ -100,19 +99,19 @@ margin: 0;
 @font-face {
 
     font-family: 'SignikaLight';
-  
+
     font-style: normal;
-  
+
     font-weight: 400; /* Do I need to specify eg. font-weight for different titles here (eg.700 for h2 etc) How to write this the best way??*/
-  
+
     src: local("Signika-Light"), url(http://themes.googleusercontent.com/static/fonts/signika/v3/koFYE26bhT88HgRA8f4vbRsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
-  
-  }
+
+}
 
 .h2 {font-family: Signika;
     color: rgb(238, 36, 97);
-     font-weight: 700;
-     text-align: left;
+    font-weight: 700;
+    text-align: left;
 }
 
 .grid {
@@ -145,8 +144,8 @@ margin: 0;
 ul { list-style-type: none; 
 }
 
-ul li:before {
-  content: '✓';
+grid-list li:before {
+    content: '✓';
 }
 
 .text {
