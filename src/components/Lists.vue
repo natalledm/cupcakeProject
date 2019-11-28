@@ -142,12 +142,14 @@ margin: 0;
     text-align: left;
 }
 
-ul { list-style-type: none; 
+.grid-list {
+    list-style-type: none;
 }
 
-grid-list li:before {
+.grid-list li:before {
     content: '✓';
 }
+
 
 .text {
     margin-block-start: 0;
