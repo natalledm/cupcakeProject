@@ -82,11 +82,13 @@ export default {
 
 <style lang="scss">
 
+<<<<<<< HEAD
 /* {
+=======
+.lists {
+>>>>>>> 0d3c39e586376f580e38453f984281fa15f2d735
     box-sizing: border-box;
-
-margin: 0;
-
+    margin: 0;
     padding: 0;
 }
 */

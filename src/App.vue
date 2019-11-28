@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <TheHeader />
-    <Home />
-    <Lists />
+    <router-view />
     <TheFooter />
   </div>
 </template>
@@ -11,15 +10,12 @@
 
 import Vue from 'vue'
 import TheHeader from './components/TheHeader'
-import Home from './views/Home'
-import Lists from './components/Lists'
 import TheFooter from './components/Footer'
 
 
 export default {
   components: {
     TheHeader,
-    Home,
     TheFooter
   }
 }
