@@ -1,12 +1,7 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <TheHeader />
-    <Home />
+    <router-view />
     <TheFooter />
   </div>
 </template>
@@ -15,14 +10,12 @@
 
 import Vue from 'vue'
 import TheHeader from './components/TheHeader'
-import Home from './views/Home'
 import TheFooter from './components/Footer'
 
 
 export default {
   components: {
     TheHeader,
-    Home,
     TheFooter
   }
 }

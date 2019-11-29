@@ -1,5 +1,5 @@
 <template>
-<div> hello Nat </div>
+    <div> Carousel here. </div>
 </template>
 
 <script>
