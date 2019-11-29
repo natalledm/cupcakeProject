@@ -1,15 +1,18 @@
 <template>
-    <footer class="footer">
-        <p class="copyright"> Cupcakes & Cookies 2013. Todos os direitos reservados.</p>
-        <p class="privacy">Conheça a nossa <a href="">Política de Privacidade</a>.</p>
-        <nav class="contact-us">
-            <ul>
-                <li><router-link to="/"><img src="../assets/Icons/facebook.png" class="fab fa-facebook-f" alt="facebook"></router-link></li>
-                <li><router-link to="/"><img src="../assets/Icons/linkedin.png" class="fab fa-linkedin-in" alt="facebook"></router-link></li>
-                <li><router-link to="/"><img src="../assets/Icons/twitter.png" class="fab fa-facebook-f" alt="twitter"></router-link></li>
-            </ul>
-        </nav>
-        <p class="privacy">Conheça a nossa <a href="">Política de Privacidade</a>.</p>
+    <footer class="footer-container">
+        <div class="line1">
+            <p class="copyright"> Cupcakes & Cookies 2013. All rights reserved.</p>
+            <p class="privacy">Read our <a href="">Privacy Policy</a>.</p>
+        </div>
+        <div class="line2">
+            <nav class="contact-us">
+                <ul>
+                    <li><router-link to="/"><img src="../assets/Icons/facebook.png" alt="facebook"></router-link></li>
+                    <li><router-link to="/"><img src="../assets/Icons/linkedin.png" alt="facebook"></router-link></li>
+                    <li><router-link to="/"><img src="../assets/Icons/twitter.png" alt="twitter"></router-link></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 </template>
 
@@ -21,12 +24,35 @@ export default {
 
 <style lang="scss" scoped>
 
-.footer {
+.footer-container {
+    background-color: rgb(238, 36, 97);
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    // grid-column-gap: 0px;
+    // grid-row-gap: 0px;
 }
 
-.footer p {
-    
+.line1 { 
+    padding: 10px;
+    color: white;
+}
+
+.line1 p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.line2 { 
+    padding: 10px;
+}
+
+.contact-us li {
+    padding: 5px;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
