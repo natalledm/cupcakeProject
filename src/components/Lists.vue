@@ -112,7 +112,7 @@ export default {
 
     
 .title {
-    font-family: Signika;
+    font-family: 'SignikaLight';
     color: rgb(238, 36, 97);
     font-weight: 500;
     text-align: left;

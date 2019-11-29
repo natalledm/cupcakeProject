@@ -34,7 +34,7 @@ body {
   box-shadow: #666666 0px 0px 7px;
   overflow: hidden;
   border-radius: 10px;
-  padding: 0 10px;
+  padding: 0;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -42,7 +42,7 @@ body {
   #app {
     width: 80%;
     margin: 15px auto;
-    padding: 0 15px;
+    padding: 0;
   }
 }
 
@@ -51,7 +51,7 @@ body {
   #app {
     width: 1000px;
     margin: 20px auto;
-    padding: 0 20px;
+    padding: 0;
   }
 }
 

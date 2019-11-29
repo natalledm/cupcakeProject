@@ -24,22 +24,25 @@ export default {
 
 <style lang="scss" scoped>
 
+@font-face {
+    font-family: 'SignikaLight';
+    font-style: normal;
+    font-weight: 400; /* Do I need to specify eg. font-weight for different titles here (eg.700 for h2 etc) How to write this the best way??*/
+    src: local("Signika-Light"), url('../assets/Fonts/Signika-Light.ttf') format("woff");
+}
+
 .footer-container {
     background-color: rgb(238, 36, 97);
-    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: repeat(2, 1fr);
-    // grid-column-gap: 0px;
-    // grid-row-gap: 0px;
+    font-family: 'SignikaLight';
+    padding: 40px 10px;
 }
 
 .line1 { 
-    padding: 10px;
     color: white;
+    font-style: italic;
 }
 
 .line1 p {
@@ -47,8 +50,8 @@ export default {
     margin-bottom: 0;
 }
 
-.line2 { 
-    padding: 10px;
+.line1 a {
+    color: white;
 }
 
 .contact-us li {
