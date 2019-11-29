@@ -1,15 +1,18 @@
 <template>
-    <footer class="footer">
-        <p class="copyright"> Cupcakes & Cookies 2013. Todos os direitos reservados.</p>
-        <p class="privacy">Conheça a nossa <a href="">Política de Privacidade</a>.</p>
-        <nav class="contact-us">
-            <ul>
-                <li><router-link to="/"><img src="../assets/Icons/facebook.png" class="fab fa-facebook-f" alt="facebook"></router-link></li>
-                <li><router-link to="/"><img src="../assets/Icons/linkedin.png" class="fab fa-linkedin-in" alt="facebook"></router-link></li>
-                <li><router-link to="/"><img src="../assets/Icons/twitter.png" class="fab fa-facebook-f" alt="twitter"></router-link></li>
-            </ul>
-        </nav>
-        <p class="privacy">Conheça a nossa <a href="">Política de Privacidade</a>.</p>
+    <footer class="footer-container">
+        <div class="line1">
+            <p class="copyright"> Cupcakes & Cookies 2013. All rights reserved.</p>
+            <p class="privacy">Read our <a href="">Privacy Policy</a>.</p>
+        </div>
+        <div class="line2">
+            <nav class="contact-us">
+                <ul>
+                    <li><router-link to="/"><img src="../assets/Icons/facebook.png" alt="facebook"></router-link></li>
+                    <li><router-link to="/"><img src="../assets/Icons/linkedin.png" alt="facebook"></router-link></li>
+                    <li><router-link to="/"><img src="../assets/Icons/twitter.png" alt="twitter"></router-link></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 </template>
 
@@ -21,12 +24,38 @@ export default {
 
 <style lang="scss" scoped>
 
-.footer {
-    display: flex;
+@font-face {
+    font-family: 'SignikaLight';
+    font-style: normal;
+    font-weight: 400; /* Do I need to specify eg. font-weight for different titles here (eg.700 for h2 etc) How to write this the best way??*/
+    src: local("Signika-Light"), url('../assets/Fonts/Signika-Light.ttf') format("woff");
 }
 
-.footer p {
-    
+.footer-container {
+    background-color: rgb(238, 36, 97);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    font-family: 'SignikaLight';
+    padding: 40px 10px;
+}
+
+.line1 { 
+    color: white;
+    font-style: italic;
+}
+
+.line1 p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.line1 a {
+    color: white;
+}
+
+.contact-us li {
+    padding: 5px;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

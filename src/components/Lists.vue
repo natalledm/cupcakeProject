@@ -1,76 +1,61 @@
 <template>
-
-<div class="lists">
-
-    <h2 class="titles second-title">Conheça algumas opções de doces</h2>
-
-<!--from here I changed the names of all div and ul class="" I can easily change it back in case we need it! -->
-
-    <div class="grid">
-
-
-            <h3 class="title">Opção X</h3>
+    <div class="lists">
+        <h2 class="titles second-title">Recipes below</h2>
+    <!--from here I changed the names of all div and ul class="" I can easily change it back in case we need it! -->
+        <div class="grid">
+            <h3 class="title">Option X</h3>
             <p class="text">
-			Tart marzipan tart pastry cake jelly-o.
-			sugar plum pudding macaroon 
-			liquorice I love. Pastry desert cookie
-			tart. I love I love topping danish.
+                Tart marzipan tart pastry cake jelly-o.
+                sugar plum pudding macaroon 
+                liquorice I love. Pastry desert cookie
+                tart. I love I love topping danish.
             </p>
                 <ul class="grid-list">
-						<li>Candy cane cheesecakes;</li>
-						<li>Apple pie wafer;</li>
-						<li>Tiramisu cupckake;</li>
-						<li>Lemon drops faworki;</li>
+                    <li>Candy cane cheesecakes;</li>
+                    <li>Apple pie wafer;</li>
+                    <li>Tiramisu cupckake;</li>
+                    <li>Lemon drops faworki;</li>
                 </ul>
-            <br>
-            <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
+            <button class="button-see-more"><router-link to="/"><img src="../assets/Icons/file.png" alt="recipes">see more</router-link></button>
         </div>
 
-            
         <div class="grid grid2">
-        <h3 class="title">Opção Y</h3>
+            <h3 class="title">Option Y</h3>
             <p class="text">
-			Halvah wypas pudding I love candy
-			toffee. Jelly beans chupa chups
-			pudding danish I love donut. I love
-			danish bonbon jelly-o I love gummies
-			cotton candy marzipan danish. Donut
-			sweet pastry jujubes croissant.
+                Halvah wypas pudding I love candy
+                toffee. Jelly beans chupa chups
+                pudding danish I love donut. I love
+                danish bonbon jelly-o I love gummies
+                cotton candy marzipan danish. Donut
+                sweet pastry jujubes croissant.
             </p>
-			
-			<ul class="grid-list">
+            <ul class="grid-list">
                 <li>Tootsie roll cheesecakes;</li>
                 <li>Chupa chups wafer;</li>
                 <li>Danish marzipan;</li>
             </ul>
-            <br/>
-            <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
+            <button class="button-see-more"><router-link to="/"><img src="../assets/Icons/file.png" alt="recipes">see more</router-link></button>
         </div>
-		
-    <div class="grid grid3">
-            <h3 class="title">Opção Z</h3>
+            
+        <div class="grid grid3">
+            <h3 class="title">Option Z</h3>
             <p class="text">
-			Licorice toffee marzipan lemon drops
-			chocolate cake ice cream.
+                Licorice toffee marzipan lemon drops
+                chocolate cake ice cream.
             </p>
-			
             <ul class="grid-list">
                 <li>Chocolate cheesecakes;</li>
                 <li>Chupa chups ice cream;</li>
                 <li>Swedish marzipan;</li>
                 <li>Brownie pie gummi bear</li>
-            <br>
             </ul>
-            <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
+            <button class="button-see-more"><router-link to="/"><img src="../assets/Icons/file.png" alt="recipes">see more</router-link></button>
+        </div>
+        <div class="button-and-text">
+            <button class="button-test"><router-link to="/"><img src="../assets/Icons/heart.png" alt="heart">Do a test!</router-link></button>
+            <h3 class="text-motivation"> Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Eget est lorem ipsum dolor.</h3>
+        </div>
     </div>
-
-    <div class="button-and-text">
-        <button class="button-test"><i class="fas fa-heart"></i> Faça um teste!</button>
-        <h3 class="text-motivation"> Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Eget est lorem ipsum dolor.</h3>
-    </div>
-
-</div>
-
 </template>
 
 <script>
@@ -82,36 +67,25 @@ export default {
 
 <style lang="scss">
 
-<<<<<<< HEAD
-/* {
-=======
 .lists {
->>>>>>> 0d3c39e586376f580e38453f984281fa15f2d735
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-*/
 
 .body {
-    font-family: Signika;
     background-color: #fff1f5;
     color: rgb(238, 36, 97);
 }
 
 @font-face {
-
     font-family: 'SignikaLight';
-
     font-style: normal;
-
     font-weight: 400; /* Do I need to specify eg. font-weight for different titles here (eg.700 for h2 etc) How to write this the best way??*/
-
-    src: local("Signika-Light"), url(http://themes.googleusercontent.com/static/fonts/signika/v3/koFYE26bhT88HgRA8f4vbRsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
-
+    src: local("Signika-Light"), url('../assets/Fonts/Signika-Light.ttf') format("woff");
 }
 
-.h2 {font-family: Signika;
+.h2 {
     color: rgb(238, 36, 97);
     font-weight: 700;
     text-align: left;
@@ -121,7 +95,6 @@ export default {
     width: 100%;
     margin: 0px;
     display: grid;
-
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
 /*  grid-template-rows: auto;  */
@@ -138,7 +111,8 @@ export default {
 }
 
     
-.h3 {font-family: Signika;
+.title {
+    font-family: 'SignikaLight';
     color: rgb(238, 36, 97);
     font-weight: 500;
     text-align: left;
