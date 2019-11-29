@@ -16,7 +16,7 @@
                     <li>Tiramisu cupckake;</li>
                     <li>Lemon drops faworki;</li>
                 </ul>
-            <button class="button-see-more"><i class="fas fa-plus-circle"></i>see more</button>
+            <button class="button-see-more"><router-link to="/"><img src="../assets/Icons/file.png" alt="recipes">see more</router-link></button>
         </div>
 
         <div class="grid grid2">
@@ -34,7 +34,7 @@
                 <li>Chupa chups wafer;</li>
                 <li>Danish marzipan;</li>
             </ul>
-            <button class="button-see-more"><i class="fas fa-plus-circle"></i>see more</button>
+            <button class="button-see-more"><router-link to="/"><img src="../assets/Icons/file.png" alt="recipes">see more</router-link></button>
         </div>
             
         <div class="grid grid3">
@@ -49,10 +49,10 @@
                 <li>Swedish marzipan;</li>
                 <li>Brownie pie gummi bear</li>
             </ul>
-            <button class="button-see-more"><i class="fas fa-plus-circle"></i>see more</button>
+            <button class="button-see-more"><router-link to="/"><img src="../assets/Icons/file.png" alt="recipes">see more</router-link></button>
         </div>
         <div class="button-and-text">
-            <button class="button-test"><i class="fas fa-heart"></i> Do a test!</button>
+            <button class="button-test"><router-link to="/"><img src="../assets/Icons/heart.png" alt="heart">Do a test!</router-link></button>
             <h3 class="text-motivation"> Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Eget est lorem ipsum dolor.</h3>
         </div>
     </div>

@@ -3,11 +3,11 @@
             <router-link to="/home" class="logo"><img src="../assets/cupcake_cookies.png" alt="logo" class="logo"></router-link>
             <nav class="nav">
                 <ul>
-                    <li><router-link to="/home"><img src="../assets/Icons/house.png" class="fas fa-home fa-fw" alt="home"></router-link></li>
-                    <li><router-link to="/"><img src="../assets/Icons/compass-arrow.png" class="fas fa-location-arrow fa-fw" alt="location"></router-link></li>
-                    <li><router-link to="/"><img src="../assets/Icons/file.png" class="fas fa-bars fa-fw" alt="bars"></router-link></li>
-                    <li><router-link to="/"><img src="../assets/Icons/question-mark.png" class="fas fa-question fa-fw" alt="faq"></router-link></li>
-                    <li><router-link to="/"><img src="../assets/Icons/person.png" class="fas fa-user-alt fa-fw" alt="login" data-toggle="modal" data-target="#exampleModal"></router-link></li>
+                    <li><router-link to="/home"><img src="../assets/Icons/house.png" alt="home"></router-link></li>
+                    <li><router-link to="/"><img src="../assets/Icons/compass-arrow.png" alt="location"></router-link></li>
+                    <li><router-link to="/"><img src="../assets/Icons/file.png" alt="bars"></router-link></li>
+                    <li><router-link to="/"><img src="../assets/Icons/question-mark.png" alt="faq"></router-link></li>
+                    <li><router-link to="/"><img src="../assets/Icons/person.png" alt="login" data-toggle="modal" data-target="#exampleModal"></router-link></li>
                 </ul>
             </nav>
     </header>
