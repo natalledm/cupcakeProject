@@ -44,6 +44,10 @@ nav li {
     padding-inline-start: 0;
     background-color: rgb(238, 36, 97);
     border-radius: 50%;
+    padding: 5px;
+    text-align: center;
+    height: 24px;
+    width: 24px;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
