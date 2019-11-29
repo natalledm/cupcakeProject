@@ -4,9 +4,6 @@
       <Carousel />
     </span>
     <Lists />
-    <span class="test-button">
-      Test button and text.
-    </span>
   </div>
 </template>
 
@@ -25,3 +22,12 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+
+.body {
+  padding: 10px;
+  background-color: white; 
+}
+
+</style>
