@@ -42,7 +42,13 @@ import SearchResultItem from '@/components/SearchResultItem'
           }
         ]
       }
+    }, 
+    mounted () {
+    this.$axios.get('/search', {
+        q: 'chocolate'
+      }).then(res => console.log("API response",  res))
     }
+
   }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
 
     <div class="lists">
-        
+
 <!--from here I changed the names of all div and ul class="" I can easily change it back in case we need it! -->
 
         <div class="grid">
