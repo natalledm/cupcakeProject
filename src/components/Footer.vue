@@ -54,16 +54,6 @@ export default {
     color: white;
 }
 
-<<<<<<< HEAD
-/*
-.footer p {
-    
-}*/
-=======
-.contact-us li {
-    padding: 5px;
-}
->>>>>>> b31f2cb2d886f4585d1a97ab4876cda9689c22ea
 
 @media (min-width: 768px) and (max-width: 1023px) {
     // tablet
