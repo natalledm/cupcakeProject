@@ -1,13 +1,26 @@
 <template>
   <div class="search-field">
     <label for="search-input" class="search-label"> Search for your favorite dessert</label>
-    <input type="search" name="search-input" id="search-input" class="search-input">
+    <input 
+    type="search" 
+    name="search-input" 
+    id="search-input" 
+    class="search-input"
+    placeholder="Search for ingredients i.g. chocolate, caramel, butter"
+    @keypress.enter="sendSearchInput"
+    >
   </div>
 </template>
 
 <script>
   export default {
-    name: 'SearchField'
+    name: 'SearchField',
+    methods: {
+      sendSearchInput(event) {
+        //console.log('event', event.target.value)
+        if(event.target.value)this.$emit('search', event.target.value)
+      }
+    }
   }
 </script>
 

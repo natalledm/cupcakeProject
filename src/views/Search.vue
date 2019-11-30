@@ -1,8 +1,17 @@
 <template>
   <main class="search">
-    <search-field />
+    <search-field 
+    v-on:search="getSearchResults"
+    />
+
     <section class="search-results">
-      <search-result-item v-for="result in results" :key="result.uri" :image="result.image" :title="result.label" :health-labels="result.healthLabels" :servings="result.yeld" />
+      <search-result-item 
+      v-for="result in results" 
+      :key="result.recipe.uri" 
+      :image="result.recipe.image" 
+      :title="result.recipe.label" 
+      :health-labels="result.recipe.healthLabels" 
+      :servings="result.recipe.yeld" />
     </section>
   </main>
 </template>
@@ -20,36 +29,44 @@ import SearchResultItem from '@/components/SearchResultItem'
       return {
         results: [
           {
-            image: 'cupcake_cookies.png',
-            label: 'Chocolate Cupckacke',
-            yeld: 2, // servings
-            calories: 2,
-            healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free'],
+            recipe: {
+              image: 'cupcake_cookies.png',
+              label: 'Chocolate Cupckacke',
+              yeld: 2, // servings
+              calories: 2,
+              uri: 'xxx',
+              healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free'],
+            }
           },
           {
-            image: 'cupcake_cookies.png',
-            label: 'Chocolate Cupckacke',
-            yeld: 2, // servings
-            calories: 2,
-            healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free'],
+          recipe: {
+              image: 'cupcake_cookies.png',
+              label: 'Chocolate Cupckacke',
+              yeld: 2, // servings
+              calories: 2,
+              uri: 'aaa',
+              healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free'],
+            }
           },
-          {
-            image: 'cupcake_cookies.png',
-            label: 'Chocolate Cupckacke',
-            yeld: 2, // servings
-            calories: 2,
-            healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free'],
-          }
+
         ]
       }
     }, 
-    mounted () {
-    this.$axios.get('/search', {
-        q: 'chocolate'
-      }).then(res => console.log("API response",  res))
+    methods: {
+      getSearchResults () {
+          this.$axios.get('/search', {
+            params:{ 
+              q: 'searchText'
+            },
+      }).then(function(response)  {
+        console.log(response.data)
+        if(response.data && response.data.length > 0) this.results = 
+        response.data
+        //targets data results above
+      })
     }
-
   }
+}
 </script>
 
 <style lang="scss" scoped>
