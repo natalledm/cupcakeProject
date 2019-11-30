@@ -1,13 +1,11 @@
 <template>
 
-<div class="lists">
-
-    <h2 class="titles second-title">Conheça algumas opções de doces</h2>
-
+    <div class="lists">
+        
 <!--from here I changed the names of all div and ul class="" I can easily change it back in case we need it! -->
 
-    <div class="grid">
-
+        <div class="grid">
+            <h2 class="titles second-title">Conheça algumas opções de doces</h2>
 
             <h3 class="title">Opção X</h3>
             <p class="text">
@@ -22,13 +20,13 @@
 						<li>Tiramisu cupckake;</li>
 						<li>Lemon drops faworki;</li>
                 </ul>
-            <br>
+            
             <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
         </div>
 
-            
-        <div class="grid grid2">
         <h3 class="title">Opção Y</h3>
+        <div class="grid grid2">
+        
             <p class="text">
 			Halvah wypas pudding I love candy
 			toffee. Jelly beans chupa chups
@@ -43,7 +41,7 @@
                 <li>Chupa chups wafer;</li>
                 <li>Danish marzipan;</li>
             </ul>
-            <br/>
+            
             <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
         </div>
 		
@@ -59,14 +57,14 @@
                 <li>Chupa chups ice cream;</li>
                 <li>Swedish marzipan;</li>
                 <li>Brownie pie gummi bear</li>
-            <br>
+            
             </ul>
             <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
     </div>
 
     <div class="button-and-text">
-        <button class="button-test"><i class="fas fa-heart"></i> Faça um teste!</button>
-        <h3 class="text-motivation"> Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Eget est lorem ipsum dolor.</h3>
+        <button class="button-test"><router-link to="/"><img src="../assets/Icons/heart.png" class="fas fa-heart" alt="Faça um teste!"></router-link>Faça um teste!</button>
+        <h3 class="text-motivation"> Cupcake ipsum dolor sit amet carrot cake marshmallow wypas. Muffin lemon drops I love caramels chocolate bar.</h3>
     </div>
 
 </div>
@@ -80,18 +78,34 @@ export default {
 
 </script>
 
-<style lang="scss">
+<style lang="scss"> /*Todo: li under p class text and rubrik. + sign to small buttons. <3 sign to big button */
 
-<<<<<<< HEAD
-/* {
-=======
-.lists {
->>>>>>> 0d3c39e586376f580e38453f984281fa15f2d735
+* {
     box-sizing: border-box;
-    margin: 0;
+
+margin: 0;
+
     padding: 0;
 }
-*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    // tablet
+    .header {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 2fr;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        grid-template-areas: 
+            'logo . menu';
+        grid-template-rows: 1fr;
+        grid-template-columns: auto 1fr auto;
+        padding: 20px;
+    }
+}
 
 .body {
     font-family: Signika;
@@ -122,25 +136,31 @@ export default {
     margin: 0px;
     display: grid;
 
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 20px;
 /*  grid-template-rows: auto;  */
 }
 
-.grid-list {
+
+.grid grid-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+    /*
     display: grid;
     display: -ms-grid;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
-    align-self: start;
-}
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr; 
+    align-self: start; 
+} */
 
     
-.h3 {font-family: Signika;
-    color: rgb(238, 36, 97);
-    font-weight: 500;
+.text-motivation {font-family: Signika;
+    color: slategray;
+    font-weight: 700;
     text-align: left;
 }
 
@@ -180,27 +200,32 @@ list-style-position: outside;
 }
 
 .button-and-text {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 20px;
 }
 
 .button-test {
+   /* background-image: url('.assets/Icons/heart.png'); */
     font-size: 24px;
-    color: white;
+    font-weight: 550;
+    text-align: center; /* this made no change, why? */
+    color: whitesmoke;
     background-color: rgb(238, 36, 97);
     border-radius: 50px;
-    width: 275px;
-    height: 79px;
-    padding: 10px;
+    /* width: 450px;
+    height: 80px; */
+    padding: 20px;
 }
 
+/* targeting i which I have deleted" gave an unnessecary icon? :) 
 .button-test i {
     color: rgb(238, 36, 97);
     border-radius: 50%;
     background-color: white;
     padding: 10px;
 }
+*/
 
 .text-motivation {
     font-style: italic;
