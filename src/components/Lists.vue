@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 
     <div class="lists">
         
@@ -8,18 +9,26 @@
             <h2 class="titles second-title">Conheça algumas opções de doces</h2>
 
             <h3 class="title">Opção X</h3>
+=======
+    <div class="lists">
+        <h2 class="titles second-title">Recipes below</h2>
+    <!--from here I changed the names of all div and ul class="" I can easily change it back in case we need it! -->
+        <div class="grid">
+            <h3 class="title">Option X</h3>
+>>>>>>> b31f2cb2d886f4585d1a97ab4876cda9689c22ea
             <p class="text">
-			Tart marzipan tart pastry cake jelly-o.
-			sugar plum pudding macaroon 
-			liquorice I love. Pastry desert cookie
-			tart. I love I love topping danish.
+                Tart marzipan tart pastry cake jelly-o.
+                sugar plum pudding macaroon 
+                liquorice I love. Pastry desert cookie
+                tart. I love I love topping danish.
             </p>
                 <ul class="grid-list">
-						<li>Candy cane cheesecakes;</li>
-						<li>Apple pie wafer;</li>
-						<li>Tiramisu cupckake;</li>
-						<li>Lemon drops faworki;</li>
+                    <li>Candy cane cheesecakes;</li>
+                    <li>Apple pie wafer;</li>
+                    <li>Tiramisu cupckake;</li>
+                    <li>Lemon drops faworki;</li>
                 </ul>
+<<<<<<< HEAD
             
             <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
         </div>
@@ -27,36 +36,46 @@
         <h3 class="title">Opção Y</h3>
         <div class="grid grid2">
         
+=======
+            <button class="button-see-more"><router-link to="/"><img src="../assets/Icons/file.png" alt="recipes">see more</router-link></button>
+        </div>
+
+        <div class="grid grid2">
+            <h3 class="title">Option Y</h3>
+>>>>>>> b31f2cb2d886f4585d1a97ab4876cda9689c22ea
             <p class="text">
-			Halvah wypas pudding I love candy
-			toffee. Jelly beans chupa chups
-			pudding danish I love donut. I love
-			danish bonbon jelly-o I love gummies
-			cotton candy marzipan danish. Donut
-			sweet pastry jujubes croissant.
+                Halvah wypas pudding I love candy
+                toffee. Jelly beans chupa chups
+                pudding danish I love donut. I love
+                danish bonbon jelly-o I love gummies
+                cotton candy marzipan danish. Donut
+                sweet pastry jujubes croissant.
             </p>
-			
-			<ul class="grid-list">
+            <ul class="grid-list">
                 <li>Tootsie roll cheesecakes;</li>
                 <li>Chupa chups wafer;</li>
                 <li>Danish marzipan;</li>
             </ul>
+<<<<<<< HEAD
             
             <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
+=======
+            <button class="button-see-more"><router-link to="/"><img src="../assets/Icons/file.png" alt="recipes">see more</router-link></button>
+>>>>>>> b31f2cb2d886f4585d1a97ab4876cda9689c22ea
         </div>
-		
-    <div class="grid grid3">
-            <h3 class="title">Opção Z</h3>
+            
+        <div class="grid grid3">
+            <h3 class="title">Option Z</h3>
             <p class="text">
-			Licorice toffee marzipan lemon drops
-			chocolate cake ice cream.
+                Licorice toffee marzipan lemon drops
+                chocolate cake ice cream.
             </p>
-			
             <ul class="grid-list">
                 <li>Chocolate cheesecakes;</li>
                 <li>Chupa chups ice cream;</li>
                 <li>Swedish marzipan;</li>
                 <li>Brownie pie gummi bear</li>
+<<<<<<< HEAD
             
             </ul>
             <button class="button-see-more"><i class="fas fa-plus-circle"></i>veja mais</button>
@@ -65,10 +84,16 @@
     <div class="button-and-text">
         <button class="button-test"><router-link to="/"><img src="../assets/Icons/heart.png" class="fas fa-heart" alt="Faça um teste!"></router-link>Faça um teste!</button>
         <h3 class="text-motivation"> Cupcake ipsum dolor sit amet carrot cake marshmallow wypas. Muffin lemon drops I love caramels chocolate bar.</h3>
+=======
+            </ul>
+            <button class="button-see-more"><router-link to="/"><img src="../assets/Icons/file.png" alt="recipes">see more</router-link></button>
+        </div>
+        <div class="button-and-text">
+            <button class="button-test"><router-link to="/"><img src="../assets/Icons/heart.png" alt="heart">Do a test!</router-link></button>
+            <h3 class="text-motivation"> Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Eget est lorem ipsum dolor.</h3>
+        </div>
+>>>>>>> b31f2cb2d886f4585d1a97ab4876cda9689c22ea
     </div>
-
-</div>
-
 </template>
 
 <script>
@@ -80,13 +105,18 @@ export default {
 
 <style lang="scss"> /*Todo: li under p class text and rubrik. + sign to small buttons. <3 sign to big button */
 
+<<<<<<< HEAD
 * {
+=======
+.lists {
+>>>>>>> b31f2cb2d886f4585d1a97ab4876cda9689c22ea
     box-sizing: border-box;
 
 margin: 0;
 
     padding: 0;
 }
+<<<<<<< HEAD
 
 @media (min-width: 768px) and (max-width: 1023px) {
     // tablet
@@ -106,26 +136,22 @@ margin: 0;
         padding: 20px;
     }
 }
+=======
+>>>>>>> b31f2cb2d886f4585d1a97ab4876cda9689c22ea
 
 .body {
-    font-family: Signika;
     background-color: #fff1f5;
     color: rgb(238, 36, 97);
 }
 
 @font-face {
-
     font-family: 'SignikaLight';
-
     font-style: normal;
-
     font-weight: 400; /* Do I need to specify eg. font-weight for different titles here (eg.700 for h2 etc) How to write this the best way??*/
-
-    src: local("Signika-Light"), url(http://themes.googleusercontent.com/static/fonts/signika/v3/koFYE26bhT88HgRA8f4vbRsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
-
+    src: local("Signika-Light"), url('../assets/Fonts/Signika-Light.ttf') format("woff");
 }
 
-.h2 {font-family: Signika;
+.h2 {
     color: rgb(238, 36, 97);
     font-weight: 700;
     text-align: left;
@@ -135,8 +161,12 @@ margin: 0;
     width: 100%;
     margin: 0px;
     display: grid;
+<<<<<<< HEAD
 
     grid-template-columns: 1fr;
+=======
+    grid-template-columns: 1fr 1fr 1fr;
+>>>>>>> b31f2cb2d886f4585d1a97ab4876cda9689c22ea
     grid-gap: 20px;
 /*  grid-template-rows: auto;  */
 }
@@ -158,9 +188,16 @@ margin: 0;
 } */
 
     
+<<<<<<< HEAD
 .text-motivation {font-family: Signika;
     color: slategray;
     font-weight: 700;
+=======
+.title {
+    font-family: 'SignikaLight';
+    color: rgb(238, 36, 97);
+    font-weight: 500;
+>>>>>>> b31f2cb2d886f4585d1a97ab4876cda9689c22ea
     text-align: left;
 }
 
