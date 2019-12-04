@@ -54,9 +54,6 @@ export default {
     color: white;
 }
 
-.contact-us li {
-    padding: 5px;
-}
 
 @media (min-width: 768px) and (max-width: 1023px) {
     // tablet
