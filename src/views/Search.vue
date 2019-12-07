@@ -54,16 +54,11 @@ import SearchResultItem from '@/components/SearchResultItem'
     }, 
     methods: {
       getSearchResults (searchText) {
-          this.$axios.get('/api', {
+          this.$axios.get('search', {
             params:{ 
               q: searchText
             }
-      }).then(function(response)  {
-        console.log(response.data.results)
-        if(response.data.results && response.data.length > 0) this.results = 
-        response.data.results
-        //targets data results above
-      })
+      }).then(response => this.results = response.data.hits)
     }
   }
 }
