@@ -11,10 +11,6 @@
 import Vue from 'vue'
 import TheHeader from './components/TheHeader'
 import TheFooter from './components/Footer'
-import Vuex from 'vuex'
-import 'es6-promise/auto'
-
-Vue.use(Vuex)
 
 
 export default {

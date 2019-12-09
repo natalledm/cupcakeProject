@@ -8,8 +8,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue";
 
 import Carousel from '@/components/Carousel.vue'
 import Lists from '@/components/Lists.vue'
