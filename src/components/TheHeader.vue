@@ -37,7 +37,6 @@ nav {
         margin: 0px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-gap: 10px;
     }
 }
 
@@ -48,8 +47,8 @@ nav li {
     border-radius: 50%;
     padding: 5px;
     text-align: center;
-    height: 24px;
     width: 24px;
+    justify-self: center;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

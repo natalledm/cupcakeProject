@@ -27,7 +27,7 @@ export default {
 @font-face {
     font-family: 'SignikaLight';
     font-style: normal;
-    font-weight: 400; /* Do I need to specify eg. font-weight for different titles here (eg.700 for h2 etc) How to write this the best way??*/
+    font-weight: 400;
     src: local("Signika-Light"), url('../assets/Fonts/Signika-Light.ttf') format("woff");
 }
 
@@ -52,6 +52,10 @@ export default {
 
 .line1 a {
     color: white;
+}
+
+.contact-us li {
+    padding: 5px;
 }
 
 
