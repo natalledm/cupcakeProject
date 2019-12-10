@@ -6,12 +6,12 @@
 
     <section class="search-results">
       <search-result-item 
-      v-for="result in results" 
-      :key="result.recipe.uri" 
-      :image="result.recipe.image" 
-      :title="result.recipe.label" 
-      :health-labels="result.recipe.healthLabels" 
-      :servings="result.recipe.yield" />
+      v-for="recipe in recipes" 
+      :key="recipe.recipe.uri" 
+      :image="recipe.recipe.image" 
+      :title="recipe.recipe.label" 
+      :health-labels="recipe.recipe.healthLabels" 
+      :servings="recipe.recipe.yield" />
     </section>
   </main>
 </template>
@@ -19,7 +19,7 @@
 <script>
 import SearchField from '@/components/SearchField'
 import SearchResultItem from '@/components/SearchResultItem'
-import { mapGetters, mapActions } from 'vuex';
+import { mapActions } from 'vuex';
   
 export default {
   name: 'Search',
@@ -28,17 +28,17 @@ export default {
     SearchResultItem
   },
   computed: {
-    ...mapActions([
-      'getRecipes',
-      ]),
-    methods: {
-      ...mapActions(['getRecipes']),
+    recipes() {
+      return this.$store.state.recipes;
     },
-      getQuery() {
-          const input = this.$el.querySelector('input[name="search-input"]').value;
-          this.getRecipes(input);
-      }
-  }
+  },
+  methods: {
+    ...mapActions(['getRecipes']),
+    
+    getSearchResults(query) {
+      this.getRecipes(query);
+    }
+  },
 }
 </script>
 
