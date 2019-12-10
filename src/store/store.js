@@ -4,6 +4,30 @@ import 'es6-promise/auto'
 
 Vue.use(Vuex)
 
-const store = new Vuex.Store({
-    
+export default new Vuex.Store({
+    state: {
+    },
+    mutations: {
+    },
+    actions: {
+    },
+    modules: {
+    }
 })
+
+// something with this
+// export default {
+//     name: 'SearchResultItem',
+//     props: ['image', 'title', 'healthLabels', 'servings'],
+//     computed: {
+//       currImage() {
+//         return this.image.startsWith('http') ? this.image : require(`@/assets/${this.image}`)
+//       }
+//     }
+//   }
+
+export const state = () => ({
+    name: '',
+    props: '',
+    computed: {}
+});
