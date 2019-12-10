@@ -11,7 +11,7 @@
       :image="result.recipe.image" 
       :title="result.recipe.label" 
       :health-labels="result.recipe.healthLabels" 
-      :servings="result.recipe.yeld" />
+      :servings="result.recipe.yield" />
     </section>
   </main>
 </template>
@@ -19,47 +19,25 @@
 <script>
 import SearchField from '@/components/SearchField'
 import SearchResultItem from '@/components/SearchResultItem'
-  export default {
-    name: 'Search',
-    components: {
-      SearchField,
-      SearchResultItem
-    },
-    data () {
-      return {
-        results: [
-          {
-            recipe: {
-              image: 'cupcake_cookies.png',
-              label: 'Chocolate Cupckacke',
-              yeld: 2, // servings
-              calories: 2,
-              uri: 'xxx',
-              healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free'],
-            }
-          },
-          {
-          recipe: {
-              image: 'cupcake_cookies.png',
-              label: 'Chocolate Cupckacke',
-              yeld: 2, // servings
-              calories: 2,
-              uri: 'aaa',
-              healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free'],
-            }
-          },
-
-        ]
-      }
-    }, 
+import { mapGetters, mapActions } from 'vuex';
+  
+export default {
+  name: 'Search',
+  components: {
+    SearchField,
+    SearchResultItem
+  },
+  computed: {
+    ...mapActions([
+      'getRecipes',
+      ]),
     methods: {
-      getSearchResults (searchText) {
-          this.$axios.get('search', {
-            params:{ 
-              q: searchText
-            }
-      }).then(response => this.results = response.data.hits)
-    }
+      ...mapActions(['getRecipes']),
+    },
+      getQuery() {
+          const input = this.$el.querySelector('input[name="search-input"]').value;
+          this.getRecipes(input);
+      }
   }
 }
 </script>
