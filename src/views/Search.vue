@@ -6,12 +6,12 @@
 
     <section class="search-results">
       <search-result-item 
-      v-for="result in results" 
-      :key="result.recipe.uri" 
-      :image="result.recipe.image" 
-      :title="result.recipe.label" 
-      :health-labels="result.recipe.healthLabels" 
-      :servings="result.recipe.yeld" />
+      v-for="recipe in recipes" 
+      :key="recipe.recipe.uri" 
+      :image="recipe.recipe.image" 
+      :title="recipe.recipe.label" 
+      :health-labels="recipe.recipe.healthLabels" 
+      :servings="recipe.recipe.yield" />
     </section>
   </main>
 </template>
@@ -19,48 +19,26 @@
 <script>
 import SearchField from '@/components/SearchField'
 import SearchResultItem from '@/components/SearchResultItem'
-  export default {
-    name: 'Search',
-    components: {
-      SearchField,
-      SearchResultItem
+import { mapActions } from 'vuex';
+  
+export default {
+  name: 'Search',
+  components: {
+    SearchField,
+    SearchResultItem
+  },
+  computed: {
+    recipes() {
+      return this.$store.state.recipes;
     },
-    data () {
-      return {
-        results: [
-          {
-            recipe: {
-              image: 'cupcake_cookies.png',
-              label: 'Chocolate Cupckacke',
-              yeld: 2, // servings
-              calories: 2,
-              uri: 'xxx',
-              healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free'],
-            }
-          },
-          {
-          recipe: {
-              image: 'cupcake_cookies.png',
-              label: 'Chocolate Cupckacke',
-              yeld: 2, // servings
-              calories: 2,
-              uri: 'aaa',
-              healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free'],
-            }
-          },
-
-        ]
-      }
-    }, 
-    methods: {
-      getSearchResults (searchText) {
-          this.$axios.get('search', {
-            params:{ 
-              q: searchText
-            }
-      }).then(response => this.results = response.data.hits)
+  },
+  methods: {
+    ...mapActions(['getRecipes']),
+    
+    getSearchResults(query) {
+      this.getRecipes(query);
     }
-  }
+  },
 }
 </script>
 
